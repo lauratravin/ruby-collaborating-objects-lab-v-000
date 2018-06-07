@@ -16,7 +16,7 @@ class Artist
   def self.all
     @@all
   end
-  def self.find_or_create_by_name(nam)
+  def self.find_or_create_by_name(nam, song = nil)
 
     if  (@@all.detect {|aux| aux.name == nam} != nil)
 
@@ -24,6 +24,7 @@ class Artist
 
     else
         Artist.new(nam)
+        Artist.add_song(song)
 
     end
 
