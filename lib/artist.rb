@@ -23,8 +23,8 @@ class Artist
        @@all.detect {|aux| aux.name == nam}
 
     else
-        artist = Artist.new(nam)
-        artist.add_song(song)
+        Artist.new(nam).add_song(song)
+
 
     end
 
